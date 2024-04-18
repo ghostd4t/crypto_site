@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
         $_SESSION['user_email'] = $user['login'];
 
         // Redirect to a protected area or display a success message
-        header('Location: ' . CRYPTO_HOST . 'protected_area.php');
+        header('Location: ..\..\user.php');
         exit;
     }
 
