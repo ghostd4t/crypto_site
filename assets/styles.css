@@ -290,6 +290,15 @@ margin-left: 20px;
     
 }
 
+.backlogo{
+    width: 200px;
+    height: 200px;
+    opacity: 20%;
+    position: relative;
+    margin: 0 auto;
+display: flex;
+}
+
 .container-title{
     color: #ffffffb8;
     text-align: center;

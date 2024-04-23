@@ -290,13 +290,16 @@ margin-left: 20px;
 }
 
 .goldrush{
-text-align: center;
-transition: all 2s;
-}
-
-.goldrush__img{width: 200px;
-height: 250px;
-margin-top: 25px;}
+  text-align: center;
+  transition: all 2s;
+  }
+  
+  .goldrush__img{width: 200px;
+    height: 200px;
+    opacity: 15%;
+    position: relative;
+    margin: 0 auto;
+  display: flex;}
 
 .docs__title{
   font-weight: normal;
