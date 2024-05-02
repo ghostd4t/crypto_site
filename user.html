@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
 </head>
 <body>
-
+<h1>Welcome to the User Dashboard</h1>
+<p>You are now logged in. Here is some user-specific information:</p>
+<ul>
+    <li>User ID: <?php echo $_SESSION['user_id']; ?></li>
+    <li>User Email: <?php echo $_SESSION['user_email']; ?></li>
+</ul>
+<a href="logout.php">Logout</a>
 </body>
 </html>
