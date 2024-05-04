@@ -15,15 +15,24 @@ $_SESSION['user_email'] = $user_email;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
-</head>
-<body>
-<h1>Welcome to the User Dashboard</h1>
-<p>You are now logged in. Here is some user-specific information:</p>
-<ul>
-    <li>User ID: <?php echo $_SESSION['user_id']; ?></li>
-    <li>User Email: <?php echo $_SESSION['user_email']; ?></li>
-</ul>
-<a href="logout.php">Logout</a>
+    <link rel="stylesheet" href="/cryptoscam/assets/usercss.css">
+    <link rel="shortcut icon" href="assets/img/logo2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <div class="account">
+        <title>User Dashboard</title>
+    </head>
+    <body>
+   <div class="titles">
+        <h1 class="intro">Welcome to the User Dashboard!</h1>
+        <p class="log_greeting">You are now logged in. Here is some user-specific information:</p>
+   </div>
+    <ul>
+        <li class="id">User ID: <?php echo $_SESSION['user_id']; ?></li>
+        <li class="email">User Email: <?php echo $_SESSION['user_email']; ?></li>
+    </ul>
+    <a href="logout.php" class="logout"><p class="logout_text">Logout</p></a>
+    </div>
 </body>
 </html>
