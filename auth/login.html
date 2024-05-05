@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="stylesheet" href="/assets/logcss.css">
+    <link rel="shortcut icon" href="/assets/img/logo2.png" type="image/x-icon">
+</head>
+<body class="body_login">
+<h2 class="log__title">Введите свой Логин и Пароль для входа!</h2>
+<form action="login.php" method="POST">
+    <table>
+        <tr>
+            <td class="log_username_form">E-mail:</td>
+            <td><input size="30" class="input__us" type="text" id="username" name="username" required></td>
+        </tr>
+        <tr>
+            <td class="label_pass">Пароль:</td>
+            <td><input size="30" maxlength="20" class="input__pass" type="password" id="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" class=""><input type="submit" value="Войти" name="submit"></td>
+        </tr>
+    </table>
+</form>
+<p class="dont_have">Don't have an account? <a class="reg_href" href="../reg/register.html">Register here</a></p>
+</div>
+</body>
+</html>
