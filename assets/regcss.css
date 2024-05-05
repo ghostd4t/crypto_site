@@ -1,66 +1,66 @@
 
 .log_container{
-  background-color: #0A1828;
-  box-shadow: none;
+    background-color: #0A1828;
+    box-shadow: none;
 }
 
 .body_login{
-  position: relative;
-  margin-top: 450px;
-  }
-  
-  .form{
+    position: relative;
+    margin-top: 450px;
+}
+
+.form{
     padding: 100px;
     margin: -105px;
-  }
-  
-    .reg_href{
-      color: #4CAF50;
-    }
-    .reg_href:hover{
-      color:#5dd92c;
-      transition: all .1s;
-    }
-  
-    .label_pass{
-      width: 153px;
-      height: 21px;
-    }
-    .input__pass{
-      width: 153px;
-      height: 21px;
-    }
-  
-  .form{
-    background-color: #092444;
-  }
-  .log_state{
-    background-color: #092444;
-  }
-  .dont_have{
-    text-align: center;
-  }
-  
-  .label_pass{
+}
+
+.reg_href{
     color: #4CAF50;
-  }
-  .log_username_form{
+}
+.reg_href:hover{
+    color:#5dd92c;
+    transition: all .1s;
+}
+
+.label_pass{
+    width: 153px;
+    height: 21px;
+}
+.input__pass{
+    width: 153px;
+    height: 21px;
+}
+
+.form{
+    background-color: #092444;
+}
+.log_state{
+    background-color: #092444;
+}
+.dont_have{
+    text-align: center;
+}
+
+.label_pass{
+    color: #4CAF50;
+}
+.log_username_form{
     color: #4CAF50;
     margin-right: 20px;
-  }
-  .log_state{
+}
+.log_state{
     color: #4CAF50;
-  }
-  
-  .dont_have{
+}
+
+.dont_have{
     color: #ccc;
     font-family: Oswald, sans-serif;
     font-size: 15px;
     font-weight: bolder;
     margin-bottom: 40px;
-  }
-  
-  form {
+}
+
+form {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
@@ -70,9 +70,9 @@
     margin-top: 40px;
     border: 2px solid transparent;
     background-color: #45a049;
-    background: 
-    linear-gradient(#0A1828, #0A1828) padding-box,
-    linear-gradient(60deg, #32CD32, #00e8ff) border-box;
+    background:
+            linear-gradient(#0A1828, #0A1828) padding-box,
+            linear-gradient(60deg, #32CD32, #00e8ff) border-box;
     outline: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
@@ -86,10 +86,10 @@
     font-family: Oswald, sans-serif;
     font-size: 20px;
     font-weight: bolder;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
+}
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-top: 8px;
@@ -99,10 +99,10 @@
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
-  }
-  
-  
-  input[type="submit"] {
+}
+
+
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -111,14 +111,14 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  
-  input[type="submit"] {
+}
+
+
+input[type="submit"] {
     background-color: #45a049;
-    background: 
-    linear-gradient(#0A1828, #0A1828) padding-box,
-    linear-gradient(60deg, #32CD32, #00e8ff) border-box;
+    background:
+            linear-gradient(#0A1828, #0A1828) padding-box,
+            linear-gradient(60deg, #32CD32, #00e8ff) border-box;
     border: 2px solid transparent;
     display: inline-block;
     font-size: 28px;
@@ -136,33 +136,33 @@
     font-family: Oswald,sans-serif;
     font-size: 25px;
     font-weight: bolder;
-  }
-  
-  input[type="submit"]:hover{
+}
+
+input[type="submit"]:hover{
     transition: all .2s;
     transform: scale(1.1);
-  }
-  
-  
-  
-  .email{
-  color: #ccc;
-  }
-  .pass{
-  color: #ccc;
-  }
-  
-  .log__title{
-    color: #ccc;
-    text-align: center;
-  }
-  .reg_title{
-    color: #ccc;
-    text-align: center;
-  }
+}
 
-  .log_fields{
+
+
+.email{
+    color: #ccc;
+}
+.pass{
+    color: #ccc;
+}
+
+.log__title{
+    color: #ccc;
+    text-align: center;
+}
+.reg_title{
+    color: #ccc;
+    text-align: center;
+}
+
+.log_fields{
     color: #ccc;
     font-size: 15px;
     font-weight: normal;
-  }
+}

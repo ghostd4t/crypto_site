@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Check if passwords match
-    if ($pass != $pass2) {
+    if ($pass!= $pass2) {
         $err[] = 'Passwords do not match!';
     }
 
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
     $res = mysqli_query($db_connect, $sql);
 
     if (!$res) {
-        $err[] = 'Error querying the database: ' . mysqli_error($db_connect);
+        $err[] = 'Error querying the database: '. mysqli_error($db_connect);
     } else {
         if (mysqli_num_rows($res) > 0) {
             $err[] = 'Email already exists!';
@@ -43,26 +43,23 @@ if (isset($_POST['submit'])) {
 
     // Generate salt and hash password
     $salt = substr(md5(uniqid()), -8);
-    $pass = md5(md5($pass) . $salt);
+    $pass = md5(md5($pass). $salt);
+    $referral = substr(md5('$hot'. uniqid()), 0, 12);
+    $referral_code = '$hot'.$referral;
 
-    // Insert user data into the database
+    $activation_key = md5($salt);
+    $activation_expiry = time() + 60 * 60; // expiry time is 1 hour from now
+
+// Insert user data into the database
     if (empty($err)) {
-        $sql = "INSERT INTO users (login, pass, salt, active_hex, status) VALUES ('$email', '$pass', '$salt', '', 0)";
+        $sql = "INSERT INTO users (login, pass, salt, active_hex, confirm_token, confirm_expiry, status, referral_code) VALUES ('$email', '$pass', '$salt', '', '$activation_key', '$activation_expiry', 0, '$referral_code')";
         $res = mysqli_query($db_connect, $sql);
 
         if (!$res) {
-            $err[] = 'Error inserting data into the database: ' . mysqli_error($db_connect);
+            $err[] = 'Error inserting data into the database: '. mysqli_error($db_connect);
         } else {
-            // Generate activation key and send activation email
-            $activation_key = md5($salt);
-            $url = CRYPTO_HOST . 'less/reg/?mode=reg&key=' . $activation_key;
-            $title = 'Registration on crypto';
-            $message = 'To activate your account, please click on the following link: <a href="' . $url . '">' . $url . '</a>';
-
-            sendMessageMail($email, CRYPTO_MAIL_AUTOR, $title, $message);
-
             // Redirect to success page
-            header('Location:' . CRYPTO_HOST . 'less/reg/?mode=reg&status=ok');
+            header('Location:..\..\success.html');
             exit;
         }
     }
@@ -71,30 +68,8 @@ if (isset($_POST['submit'])) {
     if (!empty($err)) {
         echo '<ul>';
         foreach ($err as $error) {
-            echo '<li style="color:red;">' . $error . '</li>';
+            echo '<li style="color:red;">'. $error. '</li>';
         }
         echo '</ul>';
     }
 }
-// Function to send activation email
-function sendMessageMail($to, $from, $title, $message) {
-    // Formatting email headers
-    $subject = $title;
-    $subject = '=?utf-8?b?' . base64_encode($subject) . '?=';
-    $headers = "Content-type: text/html; charset=\"utf-8\"\r\n";
-    $headers .= "From: " . $from . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Date: " . date('D, d M Y h:i:s O') . "\r\n";
-
-    // Sending email
-    if (!mail($to, $subject, $message, $headers)) {
-        return 'Error sending email!';
-    }
-}
-
-$activation_key = md5($salt);
-$url = CRYPTO_HOST . 'less/reg/?mode=reg&key=' . $activation_key;
-$title = 'Registration on crypto';
-$message = 'To activate your account, please click on the following link: <a href="' . $url . '">' . $url . '</a>';
-
-sendMessageMail($email, CRYPTO_MAIL_AUTOR, $title, $message);

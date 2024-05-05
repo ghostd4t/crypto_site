@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <title>Login</title>
     <link rel="stylesheet" href="../../assets/styles.css">
-    <link rel="stylesheet" href="/cryptoscam/assets/logcss.css">
-    <link rel="shortcut icon" href="/cryptoscam/assets/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/logcss.css">
+    <link rel="shortcut icon" href="/assets/img/logo2.png" type="image/x-icon">
 </head>
 <body class="body_login">
 <h2 class="log__title">Введите свой Логин и Пароль для входа!</h2>
 <form action="login.php" method="POST">
     <table>
         <tr>
-            <td class="email">E-mail:</td>
-            <td><input type="text" size="30" name="email"></td>
+            <td class="log_username_form">E-mail:</td>
+            <td><input size="30" class="input__us" type="text" id="username" name="username" required></td>
         </tr>
         <tr>
-            <td class="pass">Пароль:</td>
-            <td><input type="password" size="30" maxlength="20" name="pass"></td>
+            <td class="label_pass">Пароль:</td>
+            <td><input size="30" maxlength="20" class="input__pass" type="password" id="password" name="password" required></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -26,8 +26,7 @@
         </tr>
     </table>
 </form>
-    <p class="dont_have">Don't have an account? <a class="reg_href" href="../reg/register.html">Register here</a></p>
+<p class="dont_have">Don't have an account? <a class="reg_href" href="../reg/register.html">Register here</a></p>
 </div>
 </body>
 </html>
-

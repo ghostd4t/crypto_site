@@ -3,16 +3,14 @@
 $db_connect = mysqli_connect("localhost", "root", "", "cryptousersdb") or die("Error connecting to the database");
 
 // Check if the login form is submitted
-if (isset($_POST['login'])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
     // Sanitize input data
-    $email = mysqli_real_escape_string($db_connect, $_POST['email']);
-    $pass = mysqli_real_escape_string($db_connect, $_POST['pass']);
+    $username = mysqli_real_escape_string($db_connect, $_POST['username']);
+    $pass = mysqli_real_escape_string($db_connect, $_POST['password']);
 
     // Validate input data
-    if (empty($email)) {
-        $err[] = 'Email field cannot be empty!';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $err[] = 'Invalid email format';
+    if (empty($username)) {
+        $err[] = 'Username field cannot be empty!';
     }
 
     if (empty($pass)) {
@@ -20,7 +18,7 @@ if (isset($_POST['login'])) {
     }
 
     // Check if user exists and password is correct
-    $sql = "SELECT * FROM users WHERE login = '$email'";
+    $sql = "SELECT * FROM users WHERE login = '$username'";
     $res = mysqli_query($db_connect, $sql);
 
     if (!$res) {
@@ -36,20 +34,19 @@ if (isset($_POST['login'])) {
 
             if ($stored_pass != $hashed_pass) {
                 $err[] = 'Invalid password!';
+            } else {
+                // Store user information in a session or use token-based authentication
+                session_start();
+                $_SESSION['user_id'] = $user['id']; // Add this line
+                $_SESSION['user_email'] = $user['login']; // Add this line
+
+                // Redirect to a protected area or display a success message
+                $user_id = $_SESSION['user_id'];
+                $user_email = $_SESSION['user_email'];
+                header('Location:..\..\user.php?user_id=' . $user_id . '&user_email=' . urlencode($user_email));
+                exit;
             }
         }
-    }
-
-    // If no errors, authenticate the user
-    if (empty($err)) {
-        // Store user information in a session or use token-based authentication
-        session_start();
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_email'] = $user['login'];
-
-        // Redirect to a protected area or display a success message
-        header('Location: ..\..\user.php');
-        exit;
     }
 
     // Display error messages
@@ -62,10 +59,3 @@ if (isset($_POST['login'])) {
     }
 }
 ?>
-
-<!-- Login form -->
-<form method="post" action="">
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="pass" placeholder="Password" required>
-    <input type="submit" name="login" value="Login">
-</form>

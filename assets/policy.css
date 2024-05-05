@@ -15,14 +15,14 @@ html, body{
   padding: 0;
   display: flex;
   align-items: center;
- 
+
   border: solid;
   border-color: #1e262e ;
   border-top: none;
   border-left: none;
   border-right: none;
   border-width:  0.01em;
-  
+
 
 }
 
@@ -105,9 +105,9 @@ html, body{
 
 /* CSS */
 .button-85 {
-  background: 
-  linear-gradient(#0A1828, #0A1828) padding-box,
-  linear-gradient(60deg, #32CD32, #00e8ff) border-box;
+  background:
+          linear-gradient(#0A1828, #0A1828) padding-box,
+          linear-gradient(60deg, #32CD32, #00e8ff) border-box;
 
   border: 2px solid transparent;
   display: inline-block;
@@ -150,14 +150,14 @@ html, body{
 .button-85:hover::before {
   content: "";
   background: linear-gradient(
-    45deg,
-    #48ff00,
-    #00ffd5,
-    #0069fc,
-    #002bff,
-    #0069fc,
-    #00ffd5,
-    #32CD32
+          45deg,
+          #48ff00,
+          #00ffd5,
+          #0069fc,
+          #002bff,
+          #0069fc,
+          #00ffd5,
+          #32CD32
   );
   position: absolute;
   top: -2px;
@@ -195,7 +195,7 @@ html, body{
   left: 0;
   top: 0;
   border-radius: 8px;
-}  
+}
 
 .body_login {
   font-family: Oswald, sans-serif;
@@ -281,14 +281,14 @@ button[type="submit"]:hover {
 }
 
 .img_logo{
-margin-left: 20px;
+  margin-left: 20px;
 }
 
 .logo{
   width: 80px;
   height: 80px;
   display: block;
-  
+
 }
 
 .backlogo{
@@ -297,7 +297,7 @@ margin-left: 20px;
   opacity: 20%;
   position: relative;
   margin: 0 auto;
-display: flex;
+  display: flex;
 }
 
 .container-title{
@@ -378,7 +378,7 @@ display: flex;
   margin: 0 auto;
   white-space: pre-line;
   word-wrap: break-word;
-  
+
 
 }
 
