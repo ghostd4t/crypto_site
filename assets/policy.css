@@ -1,6 +1,7 @@
 html, body{
   background-color: #0A1828;
   line-height: 160%;
+  font-family: Oswald, sans-serif;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
@@ -15,14 +16,14 @@ html, body{
   padding: 0;
   display: flex;
   align-items: center;
-
+ 
   border: solid;
   border-color: #1e262e ;
   border-top: none;
   border-left: none;
   border-right: none;
   border-width:  0.01em;
-
+  
 
 }
 
@@ -105,9 +106,9 @@ html, body{
 
 /* CSS */
 .button-85 {
-  background:
-          linear-gradient(#0A1828, #0A1828) padding-box,
-          linear-gradient(60deg, #32CD32, #00e8ff) border-box;
+  background: 
+  linear-gradient(#0A1828, #0A1828) padding-box,
+  linear-gradient(60deg, #32CD32, #00e8ff) border-box;
 
   border: 2px solid transparent;
   display: inline-block;
@@ -150,14 +151,14 @@ html, body{
 .button-85:hover::before {
   content: "";
   background: linear-gradient(
-          45deg,
-          #48ff00,
-          #00ffd5,
-          #0069fc,
-          #002bff,
-          #0069fc,
-          #00ffd5,
-          #32CD32
+    45deg,
+    #48ff00,
+    #00ffd5,
+    #0069fc,
+    #002bff,
+    #0069fc,
+    #00ffd5,
+    #32CD32
   );
   position: absolute;
   top: -2px;
@@ -195,7 +196,7 @@ html, body{
   left: 0;
   top: 0;
   border-radius: 8px;
-}
+}  
 
 .body_login {
   font-family: Oswald, sans-serif;
@@ -281,14 +282,14 @@ button[type="submit"]:hover {
 }
 
 .img_logo{
-  margin-left: 20px;
+margin-left: 20px;
 }
 
 .logo{
   width: 80px;
   height: 80px;
   display: block;
-
+  
 }
 
 .backlogo{
@@ -297,7 +298,7 @@ button[type="submit"]:hover {
   opacity: 20%;
   position: relative;
   margin: 0 auto;
-  display: flex;
+display: flex;
 }
 
 .container-title{
@@ -378,7 +379,7 @@ button[type="submit"]:hover {
   margin: 0 auto;
   white-space: pre-line;
   word-wrap: break-word;
-
+  
 
 }
 
@@ -422,6 +423,115 @@ button[type="submit"]:hover {
 }
 
 .img_scr:hover{
+  border-radius: 1rem;
+  transform: scale(1.11);
+  transition: all .3s;
+}
+
+.blog{
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffffb8;
+
+
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  white-space: pre-line;
+  word-wrap: break-word;
+  transition: all 2s;
+}
+
+.blog__title{
+  font-weight: normal;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffffb8;
+  margin-top: 120px;
+  text-align: center;
+}
+.blog__slogan{
+  font-weight: normal;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffffb8;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.backlogo{
+  width: 200px;
+  height: 200px;
+  opacity: 15%;
+  position: relative;
+  margin: 0 auto;
+display: flex;
+}
+
+.blog__text {
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffffb8;
+
+
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  white-space: pre-line;
+  word-wrap: break-word;
+  transition: all 2s;
+
+}
+
+
+.blog__overview {
+  margin-top: 50px;
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffffb8;
+  font-weight: 700;
+  position: relative;
+  transition: all 2s;
+  text-align: center;
+}
+.blog__date {font-weight: normal;
+  font-size: 14px;
+  color: #ffffffb8;
+  text-align: center;
+}
+
+.blog__concl{
+  font-style: italic;
+  font-weight: normal;
+  color: #ffffffb8;
+  position: relative;
+  transition: all 2s;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.blog__text{
+  font-weight: normal;
+  color: #ffffffb8;
+  position: relative;
+  transition: all 2s;
+  text-align: left;
+}
+
+.blog__scr{
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.blog__scr-item{
+  border-radius: 1rem;
+  margin-top: 50px;
+  width: 400;
+  height: 900px;
+  margin-right: 40px;
+}
+
+.blog__scr-item:hover{
   border-radius: 1rem;
   transform: scale(1.11);
   transition: all .3s;
