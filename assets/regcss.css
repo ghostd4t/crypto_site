@@ -6,12 +6,11 @@
 
 .body_login{
     position: relative;
-    margin-top: 100px;
 }
 
 .form{
-    padding: 100px;
-    margin: -105px;
+    padding-top: 0;
+    margin-top: 40px;
 }
 
 .reg_href{
@@ -90,29 +89,19 @@ form {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
+    padding: 8px 8px;
+    font-size: 1rem;
+    border-width: calc(var(--border-width)* 1px);
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: calc(var(--border-radius)* 1px);
+    text-align: center;
+    outline: transparent;
+    width: 270px !important;
+    transition: border-color calc(var(--transition, 0.2)* 1s) ease;
+    border-radius: 4px;
+    border-width: 1px;
 }
-
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
 
 input[type="submit"] {
     background-color: #45a049;
@@ -127,20 +116,26 @@ input[type="submit"] {
     cursor: pointer;
     position: relative;
     align-items: center;
-    margin-right: -14px;
     vertical-align: middle;
     z-index: 0;
     border-radius: 8px;
-    min-height: 60px;
-    width: 250px;
+    width: 100%;
     font-family: Oswald,sans-serif;
     font-size: 25px;
     font-weight: bolder;
 }
 
 input[type="submit"]:hover{
-    transition: all .2s;
-    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background: #32CD32;
+    font-family: Oswald,sans-serif;
+    font-weight: bolder;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    -moz-box-shadow: 0px 0px 15px Green;
+    -webkit-box-shadow: 0px 0px 15px Green;
+    box-shadow: 0px 0px 15px Green;
 }
 
 
@@ -159,6 +154,8 @@ input[type="submit"]:hover{
 .reg_title{
     color: #ccc;
     text-align: center;
+    color: #fff;
+    font-size: 36px !important;
 }
 
 .log_fields{

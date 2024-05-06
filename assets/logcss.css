@@ -11,7 +11,7 @@ justify-content: center;
   margin-top: 200px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 70px;
     border: 2px solid transparent;
     background-color: #45a049;
     background: linear-gradient(#0A1828, #0A1828) padding-box, linear-gradient(60deg, #32CD32, #00e8ff) border-box;
@@ -158,28 +158,16 @@ font-size: 36px !important;
 
 
 .label_pass{
-  color: #fff;
   font-size: x-large;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-.log_username_form{
-  color: #fff;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-  margin-right: 20px;
-  font-size: x-large;
+  color: #32CD32;
+  text-shadow: 5px 5px 10px #0c0d0d;
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 2px #4CAF50, 0 0 5px #4CAF50, 0 0 8px #4CAF50, 0 0 10px #4CAF50, 0 0 12px #4CAF50, 0 0 15px #4CAF50, 0 0 18px #4CAF50
-  }
-  to {
-    text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 16px #4CAF50, 0 0 20px #4CAF50, 0 0 24px #4CAF50, 0 0 30px #4CAF50, 0 0 35px #4CAF50;
-  }
+.log_username_form{
+  color: #32CD32;
+  text-shadow: 5px 5px 10px #0c0d0d;
+  margin-right: 20px;
+  font-size: x-large;
 }
 
 .log_state{

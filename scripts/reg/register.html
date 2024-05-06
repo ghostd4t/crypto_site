@@ -7,22 +7,54 @@
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/regcss.css">
   <link rel="shortcut icon" href="../../assets/img/logo2.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body class="body_login">
+  <header>
+    <div class="div navigation-container" style="">
+        <div class="navigation">
+            <div class="div_grid">
+                <nav class="main-nav-Accordion">
+                    <ul class="list-main-items">
+                        <li class="img_logo"><img class="logo" src="../../assets/img/logo2.png" alt=""></li>
+                        <li class="list-item" data-slug="/proj_name/"><a class="comp_name" href="../../Index.html">Crypscam</a>
+                        </li>
+                        <li class="list-item" data-slug="/whitepapper/"><a class="anchor"
+                                                                            href="../../whitepapper.html">Docs</a></li>
+                        <li class="list-item" data-slug="/blog/"><a class="anchor" href="../../blog.html">Blog</a></li>
+                        <li class="list-item" data-slug="/agreement policy/"><a class="anchor"
+                                                                                href="../../policy.html">Policy</a></li>
+                        <li class="list-item" data-slug="/account/"><a class="anchor" href="login.html">Account</a>
+                        </li>
+                        <li class="list-item" data-slug="/stats/"><a class="anchor" href="../../stats.html">Stats</a></li>
+                        </li>
+
+                        <div class="button-c"><button class="button-85" >Launch app</button></div>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
 <div class="log_container">
-  <h2 class="reg_title">Регистрация</h2>
+ 
   <form action="register.php" method="POST">
+    <h2 class="reg_title">Регистрация</h2>
     <table>
       <tr>
-        <td>E-mail<font color="red">*</font>:</td>
+        <td>E-mail:</td>
         <td><input type="text" size="30" name="email"></td>
       </tr>
       <tr>
-        <td>Пароль<font color="red">*</font>:</td>
+        <td>Пароль:</td>
         <td><input type="password" size="30" maxlength="20" name="pass"></td>
       </tr>
       <tr>
-        <td>Подтверждения пароля<font color="red">*</font>:</td>
+        <td>Подтверждения пароля:</td>
         <td><input type="password" size="30" maxlength="20" name="pass2"></td>
       </tr>
       <tr>
@@ -35,7 +67,6 @@
       </tr>
     </table>
   </form>
-  <br><h3 class="log_fields">Поля со значком <font color="red">*</font> обязательны для заполнения</h3></br>
   <p class="dont_have">Already have an account? <a class="reg_href" href="../auth/login.html">Login here</a></p>
 </div>
 </body>
